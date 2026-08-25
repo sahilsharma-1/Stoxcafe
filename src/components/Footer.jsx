@@ -2,9 +2,9 @@
 
 const COLUMNS = [
   {
-    title: 'Menu',
+    title: 'Our Services',
     links: [
-      { label: 'Demat & trading', href: '#demat' },
+      { label: 'Demat Accounts & Consultancy', href: '#demat' },
       { label: 'Loans', href: '#loans' },
       { label: 'Insurance', href: '#insurance' },
     ],
@@ -13,7 +13,8 @@ const COLUMNS = [
     title: 'Company',
     links: [
       { label: 'How it works', href: '#how-it-works' },
-      { label: 'Talk to a guide', href: '#order' },
+      { label: 'Why Vantage', href: '#why-us' },
+      { label: 'Talk to an advisor', href: '#get-started' },
       { label: 'Careers', href: '#' },
     ],
   },
@@ -29,16 +30,23 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-line pt-16 pb-10">
+    <footer id="contact" className="border-t border-line bg-ink pt-16 pb-10">
       <div className="max-w-wrap mx-auto px-6">
         <div className="grid md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-12">
           <div>
-            <span className="font-display font-bold text-lg text-cream">
-              Stox<span className="text-lime">Cafe</span>
-            </span>
-            <p className="mt-4 text-sm text-muted leading-relaxed max-w-xs">
-              Financial services for people who&rsquo;d rather understand what they&rsquo;re
-              signing than just sign it. Est. 2026, Delhi.
+            <div className="flex items-center gap-2.5">
+              <span className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-grad-gold text-white font-display font-bold">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M4 18L10 11L14 15L20 6" stroke="#0A1F44" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <span className="font-display font-bold text-lg text-white">
+                Vantage <span className="text-gold2">Fincorp</span>
+              </span>
+            </div>
+            <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">
+              A full-service financial partner for demat, lending and insurance &mdash;
+              built on regulated partners and dedicated advisory. Est. 2026, Delhi.
             </p>
             <form className="mt-6 flex max-w-xs" onSubmit={(e) => e.preventDefault()}>
               <input
@@ -46,25 +54,25 @@ export default function Footer() {
                 required
                 placeholder="you@email.com"
                 aria-label="Email address"
-                className="flex-1 min-w-0 rounded-l-full bg-surface border border-line border-r-0 px-4 py-2.5 text-sm text-cream placeholder:text-muted/60 outline-none focus:border-lime transition-colors"
+                className="flex-1 min-w-0 rounded-l-full bg-white/10 border border-white/15 border-r-0 px-4 py-2.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-gold2 transition-colors"
               />
               <button
                 type="submit"
-                className="rounded-r-full bg-lime text-bg text-sm font-semibold px-4 hover:brightness-110 transition"
+                className="rounded-r-full bg-grad-gold text-ink text-sm font-semibold px-4 hover:brightness-105 transition"
               >
                 Join
               </button>
             </form>
-            <p className="mt-2 text-xs text-muted">Market notes, with your morning coffee.</p>
+            <p className="mt-2 text-xs text-white/40">Market notes, delivered weekly.</p>
           </div>
 
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <p className="font-mono text-xs uppercase tracking-widest text-muted">{col.title}</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-white/40">{col.title}</p>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-sm text-cream/90 hover:text-lime transition-colors">
+                    <a href={link.href} className="text-sm text-white/80 hover:text-gold2 transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -74,11 +82,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 pt-6 border-t border-line flex flex-col sm:flex-row justify-between gap-3 text-xs text-muted">
-          <p>© 2026 StoxCafe Financial Services Pvt. Ltd. All rights reserved.</p>
+        <div className="mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
+          <p>&copy; 2026 Vantage Fincorp Financial Services Pvt. Ltd. All rights reserved.</p>
           <p>
             Investments are subject to market risk. Loans &amp; insurance are provided by
-            our licensed partners; StoxCafe acts as a facilitator.
+            our licensed partners; Vantage Fincorp acts as a facilitator.
           </p>
         </div>
       </div>

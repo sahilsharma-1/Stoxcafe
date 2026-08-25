@@ -2,50 +2,54 @@ import Reveal from './Reveal';
 
 const FEATURES = [
   {
-    title: 'A human on the other end',
-    desc: 'Every order gets a named guide you can call back — not a ticket number.',
+    title: 'A named advisor, always',
+    desc: 'Every client is assigned a dedicated advisor you can call back \u2014 not a rotating support queue.',
   },
   {
-    title: 'Prices, upfront',
-    desc: 'Fees and rates shown before you commit to anything. No fine print surprises.',
+    title: 'Pricing, upfront',
+    desc: 'Fees and rates shown before you commit to anything. No fine print, no surprises at signing.',
   },
   {
     title: 'Compared, not pushed',
-    desc: 'We work across multiple lenders and insurers, so the recommendation isn\u2019t one-sided.',
+    desc: 'We work across multiple lenders and insurers, so every recommendation stays genuinely independent.',
   },
   {
     title: 'One dashboard',
-    desc: 'Your demat, loans and policies, tracked in the same place.',
+    desc: 'Your demat account, loans and policies tracked together, updated in real time.',
   },
   {
     title: 'Fast where it counts',
-    desc: 'Same-day account activation, 48-hour personal loan turnaround.',
+    desc: 'Same-day account activation and 48-hour personal loan turnaround, backed by our partner network.',
   },
   {
-    title: 'Talk however you like',
-    desc: 'WhatsApp, call, or drop by — support built for how you already communicate.',
+    title: 'Regulated at every step',
+    desc: 'SEBI-registered broking, RBI-regulated lenders, and IRDAI-registered insurers only.',
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="py-24 sm:py-32 border-t border-line">
+    <section id="why-us" className="py-24 sm:py-32 bg-paper scroll-mt-24">
       <div className="max-w-wrap mx-auto px-6">
         <Reveal className="max-w-xl">
-          <span className="font-mono text-xs uppercase tracking-widest text-muted">Why StoxCafe</span>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl mt-3 tracking-tight text-cream">
-            Finance, minus the cold shoulder.
+          <span className="font-mono text-xs uppercase tracking-widest text-royal font-semibold">Why Vantage Fincorp</span>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl mt-3 tracking-tight text-ink">
+            Institutional discipline. Personal attention.
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line rounded-2xl overflow-hidden">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {FEATURES.map((f, i) => (
-            <Reveal key={f.title} delay={(i % 3) * 100} className="bg-bg p-8 hover:bg-surface/60 transition-colors">
-              <div className="h-9 w-9 rounded-full border border-line flex items-center justify-center font-mono text-xs text-lime">
+            <Reveal
+              key={f.title}
+              delay={(i % 3) * 100}
+              className="rounded-2xl border border-line bg-paper p-8 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all"
+            >
+              <div className="h-10 w-10 rounded-lg bg-sky flex items-center justify-center font-mono text-xs font-semibold text-royal">
                 {String(i + 1).padStart(2, '0')}
               </div>
-              <h3 className="font-display font-bold text-lg mt-5 text-cream">{f.title}</h3>
-              <p className="mt-2 text-sm text-muted leading-relaxed">{f.desc}</p>
+              <h3 className="font-display font-bold text-lg mt-5 text-ink">{f.title}</h3>
+              <p className="mt-2 text-sm text-ink2 leading-relaxed">{f.desc}</p>
             </Reveal>
           ))}
         </div>

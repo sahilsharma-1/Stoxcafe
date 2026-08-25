@@ -1,28 +1,28 @@
-export const MENU = [
+export const SERVICES = [
   {
     id: 'demat',
     tag: '01 · Investing',
-    title: 'Demat & Trading',
+    title: 'Demat Accounts & Consultancy',
     blurb:
-      'Open an account, then actually understand what you own. Every StoxCafe demat comes with a guide, not just a login.',
+      'Open a demat and trading account, then get ongoing advisory from a dedicated consultant \u2014 not a login and a helpdesk queue.',
     items: [
-      { name: 'Demat + Trading account opening', detail: 'Paperless KYC, live in under a day', price: 'Free' },
-      { name: '1:1 onboarding call', detail: 'A real person walks you through your first trade', price: 'Included' },
-      { name: 'Portfolio check-ins', detail: 'Quarterly review of what you hold and why', price: 'Included' },
-      { name: 'Market literacy sessions', detail: 'Small-group sessions on SIPs, F&O basics, taxes', price: 'Free' },
+      { name: 'Demat + Trading account opening', detail: 'Paperless KYC, active in under a day', price: 'Free' },
+      { name: 'Dedicated onboarding consultation', detail: 'A named advisor walks you through your first trade', price: 'Included' },
+      { name: 'Quarterly portfolio reviews', detail: 'Structured check-ins on what you hold and why', price: 'Included' },
+      { name: 'Investor education sessions', detail: 'Small-group sessions on SIPs, F&O basics, taxation', price: 'Free' },
     ],
     cta: 'Open a demat account',
   },
   {
     id: 'loans',
-    tag: '02 · Borrowing',
+    tag: '02 · Lending',
     title: 'Loans',
     blurb:
-      'We shop your application across partner lenders so you don\u2019t have to fill the same form six times.',
+      'Your application is structured and shopped across our partner lenders, so you negotiate once instead of six times.',
     items: [
       { name: 'Home loan', detail: 'Compared across banks & housing finance partners', price: 'From 8.1%*' },
       { name: 'Personal loan', detail: 'Disbursal in as little as 48 hours', price: 'From 10.4%*' },
-      { name: 'Other loans', detail: 'Education, vehicle & business loans on request', price: 'On request' },
+      { name: 'Business & vehicle loans', detail: 'Structured financing on request', price: 'On request' },
     ],
     cta: 'Check your loan options',
   },
@@ -31,11 +31,11 @@ export const MENU = [
     tag: '03 · Protection',
     title: 'Insurance',
     blurb:
-      'Cover chosen for your actual life, explained in plain language before you sign anything.',
+      'Cover selected for your actual life and dependents, explained in plain terms before you sign anything.',
     items: [
-      { name: 'Term insurance', detail: 'Life cover starting at ₹1Cr sum assured', price: 'From ₹590/mo*' },
-      { name: 'Car insurance', detail: 'Comprehensive & third-party, renewed on time', price: 'From ₹2,100/yr*' },
-      { name: 'Other insurance', detail: 'Health, two-wheeler & travel cover', price: 'On request' },
+      { name: 'Term insurance', detail: 'Life cover starting at \u20b91Cr sum assured', price: 'From \u20b9590/mo*' },
+      { name: 'Health insurance', detail: 'Individual & family floater plans', price: 'From \u20b9750/mo*' },
+      { name: 'Car & two-wheeler insurance', detail: 'Comprehensive & third-party, renewed on time', price: 'From \u20b92,100/yr*' },
     ],
     cta: 'Compare insurance plans',
   },

@@ -1,34 +1,13 @@
-import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const display = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-display',
-  display: 'swap',
-});
-
-const body = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-body',
-  display: 'swap',
-});
-
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-mono',
-  display: 'swap',
-});
-
 export const metadata = {
-  title: 'StoxCafe — Demat, Loans & Insurance, Served Right',
+  title: 'Vantage Fincorp — Demat Accounts, Loans & Insurance',
   description:
-    'StoxCafe helps you open demat accounts with real guidance, get home & personal loans sorted, and pick insurance that actually makes sense — all on one menu.',
+    'Vantage Fincorp is a full-service financial partner: demat accounts with dedicated advisory, structured lending across home and personal loans, and insurance built around your life. One relationship, every product.',
   keywords: [
-    'StoxCafe',
+    'Vantage Fincorp',
     'demat account',
+    'investment consultancy',
     'personal loan',
     'home loan',
     'term insurance',
@@ -38,8 +17,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body className="font-body bg-bg text-cream">{children}</body>
+    <html lang="en">
+      <body className="font-body bg-paper text-ink">{children}</body>
     </html>
   );
 }

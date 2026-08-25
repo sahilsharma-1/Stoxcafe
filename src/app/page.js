@@ -1,24 +1,26 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import TrustTicker from '@/components/TrustTicker';
-import ServicesMenu from '@/components/ServicesMenu';
+import TrustBar from '@/components/TrustBar';
+import ServicesSection from '@/components/ServicesSection';
 import HowItWorks from '@/components/HowItWorks';
+import Credibility from '@/components/Credibility';
 import WhyUs from '@/components/WhyUs';
 import Testimonials from '@/components/Testimonials';
-import OrderCTA from '@/components/OrderCTA';
+import GetStarted from '@/components/GetStarted';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="bg-noise">
+    <main className="bg-paper">
       <Navbar />
       <Hero />
-      <TrustTicker />
-      <ServicesMenu />
+      <TrustBar />
+      <ServicesSection />
       <HowItWorks />
+      <Credibility />
       <WhyUs />
       <Testimonials />
-      <OrderCTA />
+      <GetStarted />
       <Footer />
     </main>
   );
