@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #100C09;
+  background-image:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(198, 241, 53, 0.08), transparent 60%),
+    radial-gradient(40rem 24rem at -10% 20%, rgba(232, 185, 74, 0.07), transparent 60%);
+  color: #F3ECDD;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #C6F135;
+  color: #100C09;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C6F135;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Perforated / receipt edge */
+.receipt-edge-top {
+  -webkit-mask-image: radial-gradient(circle 6px at 6px 0, transparent 6px, black 6.5px);
+  mask-image: radial-gradient(circle 6px at 6px 0, transparent 6px, black 6.5px);
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: top left;
+  mask-position: top left;
+  -webkit-mask-size: 16px 12px;
+  mask-size: 16px 12px;
+}
+
+.receipt-edge-bottom {
+  -webkit-mask-image: radial-gradient(circle 6px at 6px 12px, transparent 6px, black 6.5px);
+  mask-image: radial-gradient(circle 6px at 6px 12px, transparent 6px, black 6.5px);
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: bottom left;
+  mask-position: bottom left;
+  -webkit-mask-size: 16px 12px;
+  mask-size: 16px 12px;
+}
+
+.dashed-rule {
+  background-image: linear-gradient(to right, #4A3B2C 50%, transparent 50%);
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+}
+
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
