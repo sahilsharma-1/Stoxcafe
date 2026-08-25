@@ -13,7 +13,7 @@ const COLUMNS = [
     title: 'Company',
     links: [
       { label: 'How it works', href: '#how-it-works' },
-      { label: 'Why Vantage', href: '#why-us' },
+      { label: 'Why Stox', href: '#why-us' },
       { label: 'Talk to an advisor', href: '#get-started' },
       { label: 'Careers', href: '#' },
     ],
@@ -41,7 +41,7 @@ export default function Footer() {
                 </svg>
               </span>
               <span className="font-display font-bold text-lg text-white">
-                Vantage <span className="text-gold2">Fincorp</span>
+                Stox <span className="text-gold2">Cafe</span>
               </span>
             </div>
             <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">
@@ -83,10 +83,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
-          <p>&copy; 2026 Vantage Fincorp Financial Services Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; 2026 Stox Cafe Financial Services Pvt. Ltd. All rights reserved.</p>
           <p>
             Investments are subject to market risk. Loans &amp; insurance are provided by
-            our licensed partners; Vantage Fincorp acts as a facilitator.
+            our licensed partners; Vantage Cafe acts as a facilitator.
           </p>
         </div>
       </div>
